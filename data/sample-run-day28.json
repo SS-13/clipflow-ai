@@ -1,0 +1,272 @@
+{
+  "workflow": {
+    "id": "video-diary-v1",
+    "name": "Video Diary Workflow",
+    "currentVersion": "1.3.0",
+    "historyPath": "data/workflow-history.json",
+    "steps": [
+      "idea",
+      "script",
+      "recording",
+      "subtitle",
+      "cover",
+      "export",
+      "log"
+    ]
+  },
+  "run": {
+    "id": "run_2026_06_30_day28",
+    "workflowId": "video-diary-v1",
+    "workflowVersion": "1.2.0",
+    "workflowVersionId": "workflow_version_1_2",
+    "title": "June Review: Recording Is For AI Context",
+    "status": "succeeded",
+    "startedAt": "2026-07-01T00:08:00+08:00",
+    "endedAt": "2026-07-01T01:20:00+08:00",
+    "contentDate": "2026-06-30",
+    "videoNumber": "Day 28",
+    "durationSeconds": 223.57,
+    "steps": [
+      {
+        "id": "step_idea",
+        "runId": "run_2026_06_30_day28",
+        "type": "idea",
+        "agent": "Idea Agent",
+        "status": "succeeded",
+        "input": "A raw spoken note about June video diary review, model choices, and the role of audio recordings as AI context.",
+        "output": "One selected topic for Day 28.",
+        "artifacts": [
+          "artifact_inbox"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_script",
+        "runId": "run_2026_06_30_day28",
+        "type": "script",
+        "agent": "Script Agent",
+        "status": "succeeded",
+        "input": "Raw thought plus the user's existing video diary style.",
+        "output": "A 2-3 minute teleprompter script with opening, core point, filming notes, and first-two-second check.",
+        "artifacts": [
+          "artifact_script"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_recording",
+        "runId": "run_2026_06_30_day28",
+        "type": "recording",
+        "agent": "Human",
+        "status": "succeeded",
+        "input": "Teleprompter script.",
+        "output": "One phone recording imported into the local workflow folder.",
+        "artifacts": [
+          "artifact_recording"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_subtitle",
+        "runId": "run_2026_06_30_day28",
+        "type": "subtitle",
+        "agent": "Video Processing Agent",
+        "status": "succeeded",
+        "input": "Imported recording.",
+        "output": "Transcribed, corrected, filler-cleaned subtitle files and transparent subtitle overlay.",
+        "artifacts": [
+          "artifact_transcribed_srt",
+          "artifact_corrected_srt",
+          "artifact_no_fillers_srt",
+          "artifact_subtitle_overlay"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_cover",
+        "runId": "run_2026_06_30_day28",
+        "type": "cover",
+        "agent": "Cover Agent",
+        "status": "succeeded",
+        "input": "Video title, topic, and cover preference.",
+        "output": "Two cover candidates; v02 selected as final cover.",
+        "artifacts": [
+          "artifact_cover_v01",
+          "artifact_cover_v02",
+          "artifact_final_cover"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_export",
+        "runId": "run_2026_06_30_day28",
+        "type": "export",
+        "agent": "Video Processing Agent",
+        "status": "succeeded",
+        "input": "Trimmed recording, subtitle overlay, cover, and compliance edit decision.",
+        "output": "Final compliance-cut video and export package.",
+        "artifacts": [
+          "artifact_original_export",
+          "artifact_compliance_export",
+          "artifact_topic_timeline"
+        ],
+        "error": null
+      },
+      {
+        "id": "step_log",
+        "runId": "run_2026_06_30_day28",
+        "type": "log",
+        "agent": "Log Agent",
+        "status": "succeeded",
+        "input": "Step outputs, final artifacts, production time, and known issues.",
+        "output": "Production log and state ledgers updated.",
+        "artifacts": [
+          "artifact_run_log",
+          "artifact_content_ledger",
+          "artifact_production_stats"
+        ],
+        "error": null
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "artifact_inbox",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_idea",
+        "type": "markdown",
+        "path": "01_inbox/2026-06-30.md",
+        "description": "Raw thought capture for the content date."
+      },
+      {
+        "id": "artifact_script",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_script",
+        "type": "markdown",
+        "path": "02_scripts/2026-06-30.md",
+        "description": "Teleprompter script and filming notes."
+      },
+      {
+        "id": "artifact_recording",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_recording",
+        "type": "video",
+        "path": "03_recordings/2026-06-30/Detail_20260701004614.MP4",
+        "description": "Imported phone recording."
+      },
+      {
+        "id": "artifact_transcribed_srt",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_subtitle",
+        "type": "subtitle",
+        "path": "04_videos/2026-06-30/subtitles/2026-06-30_transcribed.srt",
+        "description": "Initial speech-to-text subtitle file."
+      },
+      {
+        "id": "artifact_corrected_srt",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_subtitle",
+        "type": "subtitle",
+        "path": "04_videos/2026-06-30/subtitles/2026-06-30_transcribed_corrected.srt",
+        "description": "Corrected subtitle file."
+      },
+      {
+        "id": "artifact_no_fillers_srt",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_subtitle",
+        "type": "subtitle",
+        "path": "04_videos/2026-06-30/subtitles/2026-06-30_no-fillers.srt",
+        "description": "Subtitle file after isolated filler cleanup."
+      },
+      {
+        "id": "artifact_subtitle_overlay",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_subtitle",
+        "type": "video",
+        "path": "04_videos/2026-06-30/subtitles/2026-06-30_subtitle_overlay.mov",
+        "description": "Transparent subtitle overlay."
+      },
+      {
+        "id": "artifact_cover_v01",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_cover",
+        "type": "image",
+        "path": "15_cover_gallery/2026-06-30/v01_2026-06-30_cover.jpg",
+        "description": "Initial cover candidate."
+      },
+      {
+        "id": "artifact_cover_v02",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_cover",
+        "type": "image",
+        "path": "15_cover_gallery/2026-06-30/v02_2026-06-30_cover.jpg",
+        "description": "Selected cover candidate."
+      },
+      {
+        "id": "artifact_final_cover",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_cover",
+        "type": "image",
+        "path": "05_exports/2026-06-30/2026-06-30_Day28_cover.jpg",
+        "description": "Final cover in the export package."
+      },
+      {
+        "id": "artifact_original_export",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_export",
+        "type": "video",
+        "path": "05_exports/2026-06-30/2026-06-30_Day28_video-diary.mp4",
+        "description": "Original exported video."
+      },
+      {
+        "id": "artifact_compliance_export",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_export",
+        "type": "video",
+        "path": "05_exports/2026-06-30/2026-06-30_Day28_video-diary_compliance-cut.mp4",
+        "description": "Final compliance-cut video."
+      },
+      {
+        "id": "artifact_topic_timeline",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_export",
+        "type": "markdown",
+        "path": "04_videos/2026-06-30/TOPIC_TIMELINE.md",
+        "description": "Topic timeline used for publishing copy and review."
+      },
+      {
+        "id": "artifact_run_log",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_log",
+        "type": "markdown",
+        "path": "06_logs/2026-06-30.md",
+        "description": "Run log with result, production time, agent notes, issues, and next improvement."
+      },
+      {
+        "id": "artifact_content_ledger",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_log",
+        "type": "csv",
+        "path": "00_state/content-ledger.csv",
+        "description": "Content ledger updated by the run."
+      },
+      {
+        "id": "artifact_production_stats",
+        "runId": "run_2026_06_30_day28",
+        "stepId": "step_log",
+        "type": "csv",
+        "path": "00_state/production-stats.csv",
+        "description": "Production time and workflow stats."
+      }
+    ],
+    "knownIssues": [
+      "The content date is 2026-06-30, but production resumed after midnight on 2026-07-01.",
+      "A compliance edit removed one segment from the original export.",
+      "The gallery command had a local write-permission issue, while the final cover and archive were still produced."
+    ],
+    "nextImprovements": [
+      "Keep content date separate from production timestamp.",
+      "Improve subtitle correction dictionary and automatic QC.",
+      "Show compliance edits as first-class step events in the dashboard."
+    ]
+  }
+}

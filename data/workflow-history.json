@@ -1,0 +1,106 @@
+{
+  "workflowId": "video-diary-v1",
+  "currentVersion": "1.3.0",
+  "versions": [
+    {
+      "id": "workflow_version_1_0",
+      "version": "1.0.0",
+      "date": "2026-06-18",
+      "title": "First complete daily video diary workflow",
+      "summary": "Established the path from raw thought to teleprompter script, phone recording, subtitle MP4, cover, export pack, and log.",
+      "changes": [
+        "Fixed the stage folders: 01_inbox, 02_scripts, 03_recordings, 04_videos, 05_exports, 06_logs.",
+        "Standardized the publish pack under 05_exports/YYYY-MM-DD.",
+        "Used scripted subtitles estimated from the teleprompter text."
+      ],
+      "knownLimits": [
+        "Subtitle timing was estimated instead of transcribed from real speech.",
+        "Cover style was basic and not versioned."
+      ]
+    },
+    {
+      "id": "workflow_version_1_1",
+      "version": "1.1.0",
+      "date": "2026-06-21",
+      "title": "Visual style and cover-first workflow",
+      "summary": "Moved cover confirmation before full editing and tightened subtitle, typography, and safe-area rules.",
+      "changes": [
+        "Added cover-first production order after video upload.",
+        "Moved subtitles from scripted estimates to real recording transcription by default.",
+        "Added 20 percent horizontal subtitle safe area.",
+        "Started archiving cover revisions in 15_cover_gallery."
+      ],
+      "knownLimits": [
+        "Visual rules existed, but production statistics were still partly scattered in logs.",
+        "Support for non-diary columns was still emerging."
+      ]
+    },
+    {
+      "id": "workflow_version_1_2",
+      "version": "1.2.0",
+      "date": "2026-06-30",
+      "title": "Two-agent workflow and structured state layer",
+      "summary": "Reduced the production model to Text Agent and Video Agent, with 00_state as the source of truth for long-term statistics.",
+      "changes": [
+        "Split execution into Text Agent for raw ideas/scripts and Video Agent for cover/edit/export/log.",
+        "Added 00_state/day-counter.json, content-ledger.csv, production-stats.csv, and publish-ledger.csv as structured state.",
+        "Separated content date from actual production timestamp.",
+        "Made production-stats.csv the monthly review source of truth instead of scanning remaining media files."
+      ],
+      "knownLimits": [
+        "History could be read from docs and logs, but was not yet queryable as product data.",
+        "Compliance edits were visible in filenames/logs, not yet first-class dashboard events."
+      ]
+    },
+    {
+      "id": "workflow_version_1_3",
+      "version": "1.3.0",
+      "date": "2026-07-01",
+      "title": "Compliance Agent and platform review gates",
+      "summary": "Adds a Compliance Agent for input and output review before script generation and before publishing.",
+      "changes": [
+        "Added Compliance Agent as a third Sub Agent beside Text Agent and Video Agent.",
+        "Added input compliance review before Text Agent generates a publish script.",
+        "Added output compliance review before the user publishes.",
+        "Kept Compliance Agent out of script generation and video production."
+      ],
+      "knownLimits": [
+        "Platform rules are still manually maintained Markdown references.",
+        "Compliance decisions still need human confirmation when platform feedback is ambiguous."
+      ]
+    }
+  ],
+  "complianceAgent": {
+    "id": "compliance-agent",
+    "name": "Compliance Agent",
+    "scope": "input and output platform compliance review",
+    "readOnlyByDefault": true,
+    "reads": [
+      "raw thoughts",
+      "scripts",
+      "subtitles",
+      "topic timelines",
+      "final video metadata",
+      "platform feedback"
+    ],
+    "returns": [
+      "pass",
+      "revise",
+      "block",
+      "risk list",
+      "minimal edit suggestions"
+    ],
+    "forbidden": [
+      "rewrite raw thoughts",
+      "generate teleprompter scripts",
+      "edit or export videos",
+      "delete files"
+    ]
+  },
+  "historyQueryCapability": {
+    "id": "workflow-history-query",
+    "name": "Workflow History Query",
+    "scope": "answer version evolution and run-history questions from structured workflow data",
+    "agent": "product capability, not a source Sub Agent"
+  }
+}
