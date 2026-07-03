@@ -1,0 +1,54 @@
+{
+  "rangeLabel": "2026年7月",
+  "platform": "douyin",
+  "snapshots": [
+    {
+      "snapshotId": "snapshot_2026_07_01_day29",
+      "contentId": "2026-07-01_Day29",
+      "title": "模型分工",
+      "dayLabel": "Day 29",
+      "snapshotDate": "2026-07-31",
+      "snapshotType": "monthly",
+      "views": 28460,
+      "likes": 1232,
+      "comments": 118,
+      "favorites": 360,
+      "shares": 78,
+      "ocrStatus": "verified",
+      "screenshotPath": "platform-snapshots/2026-07/day29-douyin.png",
+      "notes": "月末人工校对完成"
+    },
+    {
+      "snapshotId": "snapshot_2026_06_30_day28",
+      "contentId": "2026-06-30_Day28",
+      "title": "6月复盘",
+      "dayLabel": "Day 28",
+      "snapshotDate": "2026-07-31",
+      "snapshotType": "monthly",
+      "views": 34120,
+      "likes": 1840,
+      "comments": 152,
+      "favorites": 512,
+      "shares": 96,
+      "ocrStatus": "verified",
+      "screenshotPath": "platform-snapshots/2026-07/day28-douyin.png",
+      "notes": "合规重剪后最终表现"
+    },
+    {
+      "snapshotId": "snapshot_2026_07_02_day30",
+      "contentId": "2026-07-02_Day30",
+      "title": "模型档位",
+      "dayLabel": "Day 30",
+      "snapshotDate": "",
+      "snapshotType": "monthly",
+      "views": null,
+      "likes": null,
+      "comments": null,
+      "favorites": null,
+      "shares": null,
+      "ocrStatus": "pending",
+      "screenshotPath": "",
+      "notes": "待录入平台快照"
+    }
+  ]
+}

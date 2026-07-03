@@ -1,0 +1,159 @@
+{
+  "rangeLabel": "2026年7月",
+  "headline": {
+    "title": "ClipFlow 工作平台",
+    "subtitle": "围绕视频创作、封面风格和月度复盘的本地运营工作台。"
+  },
+  "productionKpis": [
+    {
+      "id": "produced",
+      "label": "本月制作",
+      "value": "5",
+      "hint": "已完成剪辑并归档"
+    },
+    {
+      "id": "published",
+      "label": "本月发布",
+      "value": "4",
+      "hint": "已发布到平台"
+    },
+    {
+      "id": "duration",
+      "label": "总视频时长",
+      "value": "18分42秒",
+      "hint": "production-stats 汇总"
+    },
+    {
+      "id": "productionTime",
+      "label": "总制作时长",
+      "value": "5小时05分",
+      "hint": "从上传视频到成片归档"
+    },
+    {
+      "id": "exportSize",
+      "label": "总导出大小",
+      "value": "783 MB",
+      "hint": "最终发布包体积"
+    }
+  ],
+  "growthKpis": [
+    {
+      "id": "views",
+      "label": "本月播放量快照",
+      "value": "82,460",
+      "hint": "手动月度快照"
+    },
+    {
+      "id": "likes",
+      "label": "点赞合计",
+      "value": "4,210",
+      "hint": "手动月度快照"
+    },
+    {
+      "id": "comments",
+      "label": "评论合计",
+      "value": "366",
+      "hint": "手动月度快照"
+    },
+    {
+      "id": "favorites",
+      "label": "收藏合计",
+      "value": "1,128",
+      "hint": "手动月度快照"
+    },
+    {
+      "id": "coverage",
+      "label": "已补平台快照",
+      "value": "4 / 5",
+      "hint": "仍有 1 条待补录"
+    }
+  ],
+  "actionItems": [
+    {
+      "id": "todo_snapshot",
+      "title": "补录 7 月平台快照",
+      "detail": "Day 30 还没有录入播放量和互动数据。",
+      "link": "/metrics/snapshots"
+    },
+    {
+      "id": "todo_cover",
+      "title": "整理读书分享模板",
+      "detail": "画廊里已有参考图，但还没有固定栏目模板。",
+      "link": "/gallery"
+    },
+    {
+      "id": "todo_run",
+      "title": "继续新一期视频创作",
+      "detail": "从脚本检测开始进入创作工作流。",
+      "link": "/create"
+    }
+  ],
+  "recentRuns": [
+    {
+      "id": "run_2026_07_02_day30",
+      "contentId": "2026-07-02_Day30",
+      "title": "模型档位",
+      "dayLabel": "Day 30",
+      "status": "exported",
+      "durationText": "3分06秒",
+      "productionText": "35分钟",
+      "snapshotStatus": "missing",
+      "coverImage": "/cover-gallery/2026-07-02/v01_2026-07-02_cover.jpg",
+      "link": "/runs/run_2026_06_30_day28"
+    },
+    {
+      "id": "run_2026_07_01_day29",
+      "contentId": "2026-07-01_Day29",
+      "title": "模型分工",
+      "dayLabel": "Day 29",
+      "status": "published",
+      "durationText": "4分11秒",
+      "productionText": "50分钟",
+      "snapshotStatus": "ready",
+      "coverImage": "/cover-gallery/2026-07-01/v02_2026-07-01_cover.jpg",
+      "link": "/runs/run_2026_06_30_day28"
+    },
+    {
+      "id": "run_2026_06_30_day28",
+      "contentId": "2026-06-30_Day28",
+      "title": "6月复盘",
+      "dayLabel": "Day 28",
+      "status": "published",
+      "durationText": "3分40秒",
+      "productionText": "2小时10分",
+      "snapshotStatus": "ready",
+      "coverImage": "/cover-gallery/2026-06-30/v02_2026-06-30_cover.jpg",
+      "link": "/runs/run_2026_06_30_day28"
+    }
+  ],
+  "galleryHighlights": [
+    {
+      "id": "gallery_generated_0702",
+      "label": "模型档位",
+      "source": "generated",
+      "type": "视频日记",
+      "imagePath": "/cover-gallery/2026-07-02/v01_2026-07-02_cover.jpg"
+    },
+    {
+      "id": "gallery_generated_0701",
+      "label": "模型分工",
+      "source": "generated",
+      "type": "视频日记",
+      "imagePath": "/cover-gallery/2026-07-01/v02_2026-07-01_cover.jpg"
+    },
+    {
+      "id": "gallery_reference_0627",
+      "label": "弱连接里的多机位视角",
+      "source": "reference",
+      "type": "参考封面",
+      "imagePath": "/cover-gallery/2026-06-27/v09_2026-06-27_cover.jpg"
+    },
+    {
+      "id": "gallery_reference_0625",
+      "label": "标题压底部",
+      "source": "reference",
+      "type": "参考封面",
+      "imagePath": "/cover-gallery/2026-06-25/v03_2026-06-25_cover.jpg"
+    }
+  ]
+}

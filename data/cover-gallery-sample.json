@@ -1,0 +1,66 @@
+{
+  "sections": [
+    {
+      "id": "generated",
+      "title": "生成封面",
+      "description": "来自每次视频工作流的最终封面和候选稿。",
+      "items": [
+        {
+          "id": "generated_0702",
+          "label": "模型档位",
+          "source": "generated",
+          "category": "视频日记",
+          "imagePath": "/cover-gallery/2026-07-02/v01_2026-07-02_cover.jpg",
+          "note": "最终成片封面"
+        },
+        {
+          "id": "generated_0701",
+          "label": "模型分工",
+          "source": "generated",
+          "category": "视频日记",
+          "imagePath": "/cover-gallery/2026-07-01/v02_2026-07-01_cover.jpg",
+          "note": "标题与副标题结构稳定"
+        },
+        {
+          "id": "generated_0630",
+          "label": "6月复盘",
+          "source": "generated",
+          "category": "视频日记",
+          "imagePath": "/cover-gallery/2026-06-30/v02_2026-06-30_cover.jpg",
+          "note": "复盘型封面"
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "参考封面",
+      "description": "用户从外部截图收藏的风格参考，用于选模板和做风格判断。",
+      "items": [
+        {
+          "id": "reference_0627",
+          "label": "弱连接里的多机位视角",
+          "source": "reference",
+          "category": "标题压底部",
+          "imagePath": "/cover-gallery/2026-06-27/v09_2026-06-27_cover.jpg",
+          "note": "适合观点类内容"
+        },
+        {
+          "id": "reference_0625",
+          "label": "标题与人像留白",
+          "source": "reference",
+          "category": "封面留白",
+          "imagePath": "/cover-gallery/2026-06-25/v03_2026-06-25_cover.jpg",
+          "note": "适合读书分享"
+        },
+        {
+          "id": "reference_0623",
+          "label": "强主标题居中",
+          "source": "reference",
+          "category": "碎碎念",
+          "imagePath": "/cover-gallery/2026-06-23/v02_2026-06-23_cover.jpg",
+          "note": "适合短观点"
+        }
+      ]
+    }
+  ]
+}
