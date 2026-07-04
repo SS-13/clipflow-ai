@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClipFlow Feature"
+  short_description: "Build focused ClipFlow Next.js pages and components."
+  default_prompt: "Use this when adding or changing ClipFlow UI pages, dashboard panels, routes, or workflow interactions."

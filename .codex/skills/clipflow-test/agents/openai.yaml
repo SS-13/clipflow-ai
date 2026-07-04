@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClipFlow Test"
+  short_description: "Add the smallest useful checks for ClipFlow changes."
+  default_prompt: "Use this when validating ClipFlow pages, data transforms, workflow branching, or regressions."

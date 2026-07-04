@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClipFlow"
+  short_description: "Route ClipFlow AI co-build tasks to the right workflow."
+  default_prompt: "Use this as the entry point for ClipFlow architecture, page, data, test, or audit tasks."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClipFlow Data Model"
+  short_description: "Create or update ClipFlow workflow data contracts."
+  default_prompt: "Use this when changing Run, Step, Gate, Artifact, dashboard, gallery, or metrics data."
